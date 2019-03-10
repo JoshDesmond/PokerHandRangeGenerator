@@ -1,6 +1,6 @@
 ### Poker Preflop Range Generator
 
-Link : https://joshdesmond.github.io/PokerPreflopRangeGenerator
+Link : https://joshdesmond.github.io/PokerHandRangeGenerator/
 This website is a tool used to generate poker preflop ranges. It was based on a website I use, called http://www.pokerhandrange.com/
 
 ![screenshot](screenshots/main.png)
