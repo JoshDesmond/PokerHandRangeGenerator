@@ -1,0 +1,57 @@
+div.option-container {
+    background-color:#ffffff;
+    word-spacing: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 2px;
+    border:1px solid #e0e0e0;
+}
+
+div.pane {
+    background-color:#ffffff;
+    word-spacing: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 2px;
+    text-align:center;
+    border:1px solid #e0e0e0;
+}
+
+div.two-thirds.column.pane {
+    min-width: 500px;
+}
+
+.slide-container {
+    width: 100%;
+}
+
+.slider {
+    width: 90%;
+}
+
+.range-display {
+    height: auto;
+    min-height: auto;
+}
+
+.option-header {
+    margin-bottom: 0rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+form.type-form {
+
+}
+
+input[type=radio] {
+    margin-left: 1em;
+}
+
+input[name=range-link] {
+    width: 90%;
+}
+
+span {
+    font-weight: bold;
+}

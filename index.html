@@ -1,0 +1,125 @@
+<html>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Poker Starting Hands</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="www/css/normalize.css">
+    <link rel="stylesheet" href="www/css/skeleton.css">
+    <link rel="stylesheet" href="www/css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Scripts -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="module" src="www/js/model/model.js"></script>
+    <script type="module" src="www/js/views/views.js"></script>
+    <script type="module" src="www/js/model/handrankings.js"></script>
+</head>
+<body>
+<header>
+    <h1>Poker Range Generator</h1>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h2>Instructions</h2>
+                <p>
+                    This tool allows you to generate your pre-flop ranges for Texas Hold'em. You can set the percentage 
+					of hands you want to include in your early position range, set a slightly tigher range of hands to 
+					play from late position range, and then indicate the smallest percentage of hands you would 3-bet with.
+					<br/>
+                    You can select which hand ranking type you want to compare your hand against. Vs. Tight 9 ranks
+                    hands by the probability they win against nine opponents who fold weak hands. Vs. Random 1 ranks
+                    hands by the probability they win against a single random hand. And Random 9 ranks hands by the
+                    probability they win against nine other random hands.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="two-thirds column pane">
+                <svg width="500" height="500" id="handgrid"></svg>
+            </div>
+            <div class="one-third column pane">
+                <div class="option-container" id="range-selectors">
+                    <div class="range-display" id="3bet">
+                        <h3 class="option-header">Range Input:</h3>
+                        <p><b><span style="color:#FF0000">3 Bet Range</span></b>: top <input class="range-text"
+                                                                                             type="text" size="2"
+                                                                                             name="slider-value">%</p>
+                        <input type="range" min=".5" max="100" value="4" step=".5" class="slider">
+                    </div>
+
+                    <div class="range-display" id="early">
+                        <p><b><span style="color:#FF8900">Early Range</span></b>: top <input class="range-text"
+                                                                                             type="text" size="2"
+                                                                                             name="slider-value">%</p>
+                        <input type="range" min=".5" max="100" value="15" step=".5" class="slider">
+                    </div>
+
+                    <div class="range-display" id="late">
+                        <p><b><span style="color:#00FF00">Late Range</span></b>: top <input class="range-text"
+                                                                                            type="text" size="2"
+                                                                                            name="slider-value">%</p>
+                        <input type="range" min=".5" max="100" value="25" step=".5" class="slider">
+                    </div>
+
+                </div>
+                <div class="option-container" id="type-selector">
+                    <h3 class="option-header">Hand Ranking Type:</h3>
+                    <form class="type-form" id="type-radio-form">
+                        <input type="radio" name="range-type" value="tight" checked> vs Tight 9
+                        <input type="radio" name="range-type" value="heads-up"> vs Random 1
+                        <input type="radio" name="range-type" value="random"> vs Random 9
+                    </form>
+                </div>
+                <div class="option-container" id="url-form" hidden>
+                    <h3 class="option-header">Link To Grid:</h3>
+                    <form id="form_range" action="">
+                        <input id="range-link" type="text" name="range-link" readonly="">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <h2>About</h2>
+                <p>
+                    The data for hand ranks were gathered from three sources. You can see links to the websites to learn
+                    more about the specific methodology used to generate the hand rankings.
+                </p>
+                <ul>
+                    <li><a href="http://www.propokertools.com/orderings/heordering.txt">Tight 9</a></li>
+                    <li><a href="http://www.jazbo.com/poker/huholdem.html">Random 1</a></li>
+                    <li><a href="http://holdemtight.com/pgs/od/oddpgs/3-169holdemhands.htm">Random 9</a></li>
+                </ul>
+                <p>
+                    The inspiration for this visualization was <a href="http://www.pokerhandrange.com/">www.pokerhandrange.com</a>
+                </p>
+                </p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+</main>
+<script type="module" src="www/js/controller.js"></script>
+<script>
+
+</script>
+</body>
+</html>
